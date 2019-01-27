@@ -69,7 +69,7 @@ class _CoolAnimatedAppState extends State<CoolAnimatedApp> {
       ).animate(
         CurvedAnimation(
           parent: controller,
-          curve: Interval(0.1, 0.6, curve: Curves.fastOutSlowIn),
+          curve: Interval(0.0, 0.67, curve: Curves.fastOutSlowIn),
         ),
       );
       textTranslation = Tween(
@@ -78,7 +78,7 @@ class _CoolAnimatedAppState extends State<CoolAnimatedApp> {
       ).animate(
         CurvedAnimation(
           parent: controller,
-          curve: Interval(0.3, 0.9, curve: Curves.ease),
+          curve: Interval(0.34, 0.84, curve: Curves.ease),
         ),
       );
       buttonTranslation = Tween(
@@ -87,26 +87,26 @@ class _CoolAnimatedAppState extends State<CoolAnimatedApp> {
       ).animate(
         CurvedAnimation(
           parent: controller,
-          curve: Interval(0.7, 1.0, curve: Curves.easeIn),
+          curve: Interval(0.67, 1.0, curve: Curves.easeIn),
         ),
       );
 
       imageOpacity = Tween(begin: 0.0, end: 1.0).animate(
         CurvedAnimation(
           parent: controller,
-          curve: Interval(0.0, 0.6, curve: Curves.easeIn),
+          curve: Interval(0.0, 0.67, curve: Curves.easeIn),
         ),
       );
       textOpacity = Tween(begin: 0.0, end: 1.0).animate(
         CurvedAnimation(
           parent: controller,
-          curve: Interval(0.3, 0.9, curve: Curves.linear),
+          curve: Interval(0.34, 0.84, curve: Curves.linear),
         ),
       );
       buttonOpacity = Tween(begin: 0.0, end: 1.0).animate(
         CurvedAnimation(
           parent: controller,
-          curve: Interval(0.7, 1.0, curve: Curves.easeIn),
+          curve: Interval(0.67, 1.0, curve: Curves.easeIn),
         ),
       );
     }
