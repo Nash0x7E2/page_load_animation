@@ -13,7 +13,7 @@ void main() {
       },
       theme: ThemeData(
         textTheme: TextTheme(
-          display1: TextStyle(
+          body2: TextStyle(
             color: Colors.black54,
             fontWeight: FontWeight.w600,
             letterSpacing: 1.2,
@@ -143,7 +143,10 @@ class _CoolAnimatedAppState extends State<CoolAnimatedApp> {
                         left: 12.0, right: 12.0, top: 44.0),
                     child: Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non lorem non justo congue feugiat ut a enim. Ut et sem nec lacus aliquet gravida. Mauris viverra lectus nec vulputate placerat. Nullam sit amet blandit massa, volutpat blandit arcu. Vivamus eu tellus tincidunt, vestibulum neque eu, sagittis neque. Phasellus vitae rutrum magna, eu finibus mi. Suspendisse eget laoreet metus. In mattis dui vitae vestibulum molestie. Curabitur bibendum ut purus in faucibus.",
-                      style: Theme.of(context).textTheme.display1,
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .body2,
                     ),
                   ),
                 ),
