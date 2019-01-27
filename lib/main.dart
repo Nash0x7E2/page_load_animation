@@ -115,7 +115,7 @@ class _CoolAnimatedAppState extends State<CoolAnimatedApp> {
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: ModalRoute.of(context).animation,
+      animation: controller,
       builder: (BuildContext context, Widget child) {
         return Column(
           children: <Widget>[
