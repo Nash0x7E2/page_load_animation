@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:page_load_animation/widgets/app_button.dart';
+import 'package:page_load_animation/widgets/app_text.dart';
+import 'package:page_load_animation/widgets/header_widget.dart';
 
 void main() {
   runApp(
@@ -122,14 +125,7 @@ class _CoolAnimatedAppState extends State<CoolAnimatedApp> {
               translation: imageTranslation.value,
               child: FadeTransition(
                 opacity: imageOpacity,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(4.0),
-                  child: Image.asset(
-                    "assets/new_york.jpeg",
-                    height: 300.0,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                child: HeaderImage(),
               ),
             ),
             Expanded(
@@ -137,17 +133,7 @@ class _CoolAnimatedAppState extends State<CoolAnimatedApp> {
                 translation: textTranslation.value,
                 child: FadeTransition(
                   opacity: textOpacity,
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 12.0, right: 12.0, top: 44.0),
-                    child: Text(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non lorem non justo congue feugiat ut a enim. Ut et sem nec lacus aliquet gravida. Mauris viverra lectus nec vulputate placerat. Nullam sit amet blandit massa, volutpat blandit arcu. Vivamus eu tellus tincidunt, vestibulum neque eu, sagittis neque. Phasellus vitae rutrum magna, eu finibus mi. Suspendisse eget laoreet metus. In mattis dui vitae vestibulum molestie. Curabitur bibendum ut purus in faucibus.",
-                      style: Theme
-                          .of(context)
-                          .textTheme
-                          .body2,
-                    ),
-                  ),
+                  child: AppText(),
                 ),
               ),
             ),
@@ -155,42 +141,14 @@ class _CoolAnimatedAppState extends State<CoolAnimatedApp> {
               translation: buttonTranslation.value,
               child: FadeTransition(
                 opacity: buttonOpacity,
-                child: RaisedButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                  ),
-                  color: Colors.black54,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 34.0, vertical: 8.0),
-                    child: Text(
-                      "Visit",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24.0,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  onPressed: () {
-                    Scaffold.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text(
-                          "You pushed the button ",
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                        backgroundColor: Colors.black54,
-                      ),
-                    );
-                  },
-                ),
+                child: new Button(),
               ),
             ),
-            SizedBox(height: 44.0),
+            SizedBox(height: 34.0),
           ],
         );
       },
     );
   }
 }
+
