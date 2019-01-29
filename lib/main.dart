@@ -98,7 +98,7 @@ class _CoolAnimatedAppState extends State<CoolAnimatedApp> {
       );
       buttonTranslation = Tween(
         begin: Offset(0.0, 1.0),
-        end: Offset(0.0, 0.5),
+        end: Offset(0.0, 0.0),
       ).animate(
         CurvedAnimation(
           parent: controller,
@@ -123,26 +123,17 @@ class _CoolAnimatedAppState extends State<CoolAnimatedApp> {
           children: <Widget>[
             FractionalTranslation(
               translation: imageTranslation.value,
-              child: FadeTransition(
-                opacity: imageOpacity,
-                child: HeaderImage(),
-              ),
+              child: HeaderImage(),
             ),
             Expanded(
               child: FractionalTranslation(
                 translation: textTranslation.value,
-                child: FadeTransition(
-                  opacity: textOpacity,
-                  child: AppText(),
-                ),
+                child: AppText(),
               ),
             ),
             FractionalTranslation(
               translation: buttonTranslation.value,
-              child: FadeTransition(
-                opacity: buttonOpacity,
-                child: new Button(),
-              ),
+              child: new Button(),
             ),
             SizedBox(height: 34.0),
           ],
